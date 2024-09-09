@@ -10,7 +10,7 @@ function App() {
     <>
     <BrowserRouter>
      <Routes>
-      <Route path='human-linktree' element={<HumansLinktree/>}/>
+      <Route path='/' element={<HumansLinktree/>}/>
      </Routes>
     </BrowserRouter>
     </>
