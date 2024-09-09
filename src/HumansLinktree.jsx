@@ -31,11 +31,9 @@ const HumansLinktree = () => {
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
+       
         arrows: false,
-        speed: 2000,
-        autoplaySpeed: 2000,
-        cssEase: "linear",
+       
         responsive: [
             {
                 breakpoint: 768, // for screens smaller than 768px (mobile devices)
