@@ -126,8 +126,8 @@ const HumansLinktree = () => {
                         <div className="h-[100px] w-[100px] rounded-full">
                             <img src={humans} alt="image" className="h-[100px] w-[100px] rounded-full mx-auto" />
                         </div>
-                        <h2 className='text-lg font-bold pt-3'>Dr. Parul Chaudhri</h2>
-                        <p className='pt-3 text-lg'>
+                        <h2 className='text-lg font-bold pt-3 text-[#502e7b]'>Dr. Parul Chaudhri</h2>
+                        <p className='pt-3 text-lg text-[#502e7b]'>
                             🐱 Animal Communicator® 🐶<span className='block'> Animal Communication School & Community</span>
                         </p>
                         <div className="flex gap-4 py-3">
@@ -148,7 +148,7 @@ const HumansLinktree = () => {
                             </a>
                         </div>
                         <div className="w-full py-3">
-                            <h1 className='font-bold pb-3 text-xl'>TED SPEAKER</h1>
+                            <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>TED SPEAKER</h1>
                             <a href='https://www.youtube.com/watch?v=1RdcFTJBLYE' target='_blank'>
                                 <div className="div inline-flex lg:h-[300px] h-auto w-max-full overflow-hidden ">
                                     <img src={tedspeaker3} alt='image' className='w-full object-fit-contain rounded-lg' />
@@ -156,7 +156,7 @@ const HumansLinktree = () => {
                             </a>
                         </div>
                         <div className="w-full py-3">
-                            <h1 className="font-bold pb-3 text-xl">TAKE THE QUIZ!</h1>
+                            <h1 className="font-bold pb-3 text-xl text-[#502e7b]">TAKE THE QUIZ!</h1>
                             <div
                                 className="bg-primary rounded-lg p-2 inline-flex items-center lg:w-[530px] w-full gap-2 cursor-pointer"
                                 onClick={() => setShowQuiz(true)} // Show quiz section on click
@@ -211,7 +211,7 @@ const HumansLinktree = () => {
                             </div>
                         )}
                         <div className="w-full py-3">
-                            <h1 className='font-bold pb-3 text-xl'>MEDIA SPEAKS</h1>
+                            <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>MEDIA SPEAKS</h1>
                             <div className="lg:w-[530px] w-full inline-flex items-center">
                                 <Slider {...settings} className="w-full">
                                     <div className="slide-item">
@@ -246,7 +246,7 @@ const HumansLinktree = () => {
                             </div>
                         </div>
                         <div className="w-full py-3">
-                            <h1 className='font-bold pb-3 text-xl'>WEBSITE</h1>
+                            <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>WEBSITE</h1>
                             <a href='https://humansofanimalland.com/' target='_blank'>
                                 <div className="bg-primary rounded-lg p-2 inline-flex items-center lg:w-[530px] w-full gap-5 cursor-pointer ">
                                     <div className="icon w-[50px] h-[50px] rounded-lg overflow-hidden">
@@ -259,7 +259,7 @@ const HumansLinktree = () => {
                             </a>
                         </div>
                         <div className="w-full py-3">
-                            <h1 className='font-bold pb-3 text-xl'>NEW ADVANCED HEALING</h1>
+                            <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>NEW ADVANCED HEALING</h1>
                             <div className=" lg:w-[530px] w-full inline-flex items-center">
                                 <div className="grid grid-cols-3 gap-3">
                                     <div className="col-span-1">
@@ -302,7 +302,7 @@ const HumansLinktree = () => {
                             </div>
                         </div>
                         <div className="w-full py-3">
-                            <h1 className='font-bold pb-3 text-xl'>BLOGS</h1>
+                            <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>BLOGS</h1>
                             <div className=" lg:w-[530px] w-full inline-flex items-center">
                                 <div className="grid grid-cols-1 gap-5">
                                     <div className="col-span-1 ">
