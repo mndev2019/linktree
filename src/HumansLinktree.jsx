@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+
 import humans from './assets/humans.png'
 import mail from './assets/gmail.png'
 import insta from './assets/instagram.png'
@@ -21,6 +21,7 @@ import healing from './assets/healing.png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { useState } from 'react'
 //import { Link } from 'react-router-dom'
 
 const HumansLinktree = () => {
