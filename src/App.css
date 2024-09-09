@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body{
+  font-family: "Crimson Text", serif;
+  background-color: #f7f2ef;
+}
+.newsbox{
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+}
