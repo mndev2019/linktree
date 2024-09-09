@@ -5,7 +5,8 @@ import insta from './assets/instagram.png'
 import fb from './assets/facebook.png'
 import youtube from './assets/youtube.png'
 import whatsapp from './assets/whatsapp.png'
-import tedspeaker from './assets/tedspeaker.webp'
+import spotify from './assets/spotify.png'
+//import tedspeaker from './assets/tedspeaker.webp'
 import logo from './assets/logo.png'
 
 //import tedspeaker2 from './assets/humansofanimallandtedspeaker.jpeg'
@@ -13,30 +14,39 @@ import tedspeaker3 from './assets/tedspeaker3.png'
 //import tedspeahermedia from './assets/tedimagemedia.png'
 import buddylife from './assets/buddylife.png'
 import hindustan from './assets/hindustan-times.png'
-import indiatimes from './assets/Indiatimes.jpg'
-import amarujala from './assets/Amar-Ujala.avif'
+import indiatimes from './assets/timesindia.png'
+import amarujala from './assets/amarujala.jfif'
 import blogs1 from './assets/blogs1.png'
 import { CalendarOutlined } from '@ant-design/icons'
-import healing from './assets/healing.png'
+//import healing from './assets/healing.png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { useState } from 'react'
+//import { useState } from 'react'
 //import { Link } from 'react-router-dom'
 
 const HumansLinktree = () => {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
+        arrows: false,
         speed: 2000,
-
         autoplaySpeed: 2000,
-        cssEase: "linear"
+        cssEase: "linear",
+        responsive: [
+            {
+                breakpoint: 768, // for screens smaller than 768px (mobile devices)
+                settings: {
+                    slidesToShow: 2, // show 2 slides on mobile
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
-    const [showQuiz, setShowQuiz] = useState(false); // Control quiz visibility
+    {/*  const [showQuiz, setShowQuiz] = useState(false); // Control quiz visibility
     const [currentQuizIndex, setCurrentQuizIndex] = useState(0); // Track the current quiz
     const [selectedAnswers, setSelectedAnswers] = useState({}); // Store selected answers
 
@@ -95,28 +105,28 @@ const HumansLinktree = () => {
                 "D) Never"
             ]
         },
-    ]
+    ]*/}
 
     // Function to handle selecting an answer
-    const handleAnswerSelect = (quizIndex, answerIndex) => {
-        setSelectedAnswers({ ...selectedAnswers, [quizIndex]: answerIndex });
-    }
+    // const handleAnswerSelect = (quizIndex, answerIndex) => {
+    //  setSelectedAnswers({ ...selectedAnswers, [quizIndex]: answerIndex });
+    //  }
 
     // Function to move to the next quiz
-    const handleNextQuiz = () => {
-        if (currentQuizIndex < arr.length - 1) {
-            setCurrentQuizIndex(currentQuizIndex + 1); // Move to next quiz
-        } else {
-            setShowQuiz(false); // Hide quizzes after the last one
-        }
-    }
+    // const handleNextQuiz = () => {
+    // if (currentQuizIndex < arr.length - 1) {
+    // setCurrentQuizIndex(currentQuizIndex + 1); // Move to next quiz
+    // } else {
+    //  setShowQuiz(false); // Hide quizzes after the last one
+    //}
+    //   }
 
     // Function to move to the previous quiz
-    const handlePreviousQuiz = () => {
-        if (currentQuizIndex > 0) {
-            setCurrentQuizIndex(currentQuizIndex - 1); // Move to the previous quiz
-        }
-    }
+    //  const handlePreviousQuiz = () => {
+    // if (currentQuizIndex > 0) {
+    //  setCurrentQuizIndex(currentQuizIndex - 1); // Move to the previous quiz
+    // }
+    //  }
 
     return (
         <>
@@ -127,10 +137,13 @@ const HumansLinktree = () => {
                             <img src={humans} alt="image" className="h-[100px] w-[100px] rounded-full mx-auto" />
                         </div>
                         <h2 className='text-lg font-bold pt-3 text-[#502e7b]'>Dr. Parul Chaudhri</h2>
-                        <p className='pt-3 text-lg text-[#502e7b]'>
-                            🐱 Animal Communicator® 🐶<span className='block'> Animal Communication School & Community</span>
+                        <p className='pt-3 text-lg text-primary'>
+                            Animal Communicator <span className='block'>Soul Level Animal Communication Reading | Flower Essence Therapy | Energy Healing</span>
                         </p>
-                        <div className="flex gap-4 py-3">
+                        <p className='pt-3 text-lg text-primary'>
+                            Bridging The Gap Between Pets And Their Humans.Healing Through Energy And Connection.
+                        </p>
+                        <div className="flex gap-4 py-5">
                             <a href='mailto:soulpets@humansofanimalland.com' target='_blank'>
                                 <img src={mail} alt='email' className='h-[30px] w-[30px]' />
                             </a>
@@ -143,19 +156,39 @@ const HumansLinktree = () => {
                             <a href='https://www.youtube.com/@humansofanimalland1929' target='_blank'>
                                 <img src={youtube} alt='youtube' className='h-[37px] w-[37px]' />
                             </a>
+                            <a href='https://open.spotify.com/episode/0H6cLGHbsnUSV2XNSYuvnU?si=hxGsUYCtQ3q8jcE5Qek3YQ' target='_blank'>
+                                <img src={spotify} alt='youtube' className='h-[35px] w-[35px]' />
+                            </a>
                             <a href='https://wa.me/+918527044887' target='_blank'>
                                 <img src={whatsapp} alt='whatsapp' className='h-[35px] w-[35px]' />
                             </a>
                         </div>
                         <div className="w-full py-3">
-                            <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>TED SPEAKER</h1>
+                            <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>Dr PARUL SPEAKS</h1>
                             <a href='https://www.youtube.com/watch?v=1RdcFTJBLYE' target='_blank'>
-                                <div className="div inline-flex lg:h-[300px] h-auto w-max-full overflow-hidden ">
-                                    <img src={tedspeaker3} alt='image' className='w-full object-fit-contain rounded-lg' />
+                                <div className="bg-primary rounded-lg p-2 inline-flex items-center lg:w-[530px] w-full gap-5 cursor-pointer ">
+                                    <div className="icon w-[50px] h-[50px] rounded-lg overflow-hidden">
+                                        <img src={tedspeaker3} alt="image" className="w-[70px] h-[50px] object-fit-cover bg-white" />
+                                    </div>
+                                    <div className="text">
+                                        <p className="text-light font-semibold text-md">How Animals Transformed My Life / TEDxVIFT </p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
                         <div className="w-full py-3">
+                            <a href='https://www.instagram.com/reel/C_Xq29BSPoN/?igsh=OXBmOHVzMG5xNXRj' target='_blank'>
+                                <div className="bg-primary rounded-lg p-2 inline-flex items-center lg:w-[530px] w-full gap-5 cursor-pointer ">
+                                    <div className="icon w-[50px] h-[50px] rounded-lg overflow-hidden">
+                                        <img src={tedspeaker3} alt="image" className="w-[70px] h-[50px] object-fit-cover bg-white" />
+                                    </div>
+                                    <div className="text">
+                                        <p className="text-light font-semibold text-md">Exclusive Interview with Dr Parul Chaudhri</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {/*  <div className="w-full py-3">
                             <h1 className="font-bold pb-3 text-xl text-[#502e7b]">TAKE THE QUIZ!</h1>
                             <div
                                 className="bg-primary rounded-lg p-2 inline-flex items-center lg:w-[530px] w-full gap-2 cursor-pointer"
@@ -191,7 +224,7 @@ const HumansLinktree = () => {
                                         ))}
                                     </div>
                                     <div className="flex justify-between mt-4">
-                                        {/* Show 'Previous' button only if not on the first quiz */}
+                                        {/* Show 'Previous' button only if not on the first quiz 
                                         {currentQuizIndex > 0 && (
                                             <button
                                                 className="bg-secondary text-white px-4 py-2 rounded-lg"
@@ -209,10 +242,10 @@ const HumansLinktree = () => {
                                     </div>
                                 </div>
                             </div>
-                        )}
+                        )}*/}
                         <div className="w-full py-3">
-                            <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>MEDIA SPEAKS</h1>
-                            <div className="lg:w-[530px] w-full inline-flex items-center">
+                            <h1 className='font-bold pb-3 text-xl text-primary'>MEDIA SPEAKS</h1>
+                            <div className="lg:w-[530px] w-full inline-flex items-center overflow-hidden border border-primary rounded-lg p-3 shadow-lg shadow-gray-300">
                                 <Slider {...settings} className="w-full">
                                     <div className="slide-item">
                                         <div className="w-[150px] h-[150px] flex items-center justify-center newsbox">
@@ -258,7 +291,7 @@ const HumansLinktree = () => {
                                 </div>
                             </a>
                         </div>
-                        <div className="w-full py-3">
+                        {/* <div className="w-full py-3">
                             <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>NEW ADVANCED HEALING</h1>
                             <div className=" lg:w-[530px] w-full inline-flex items-center">
                                 <div className="grid grid-cols-3 gap-3">
@@ -300,7 +333,7 @@ const HumansLinktree = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>*/}
                         <div className="w-full py-3">
                             <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>BLOGS</h1>
                             <div className=" lg:w-[530px] w-full inline-flex items-center">
@@ -325,9 +358,9 @@ const HumansLinktree = () => {
                             </div>
                         </div>
                         <div className="w-full py-3">
-                            <h1 className='font-bold pb-3 text-xl'>COMING SOON</h1>
+                            <h1 className='font-bold pb-3 text-xl text-primary'>COMING SOON</h1>
                             <div className='lg:w-[530px] w-full inline-flex items-center'>
-                                <div className="grid grid-cols-2 gap-5">
+                                <div className="grid grid-cols-2 gap-5 w-full">
                                     <div className="col-span-1">
                                         <div className="w-full h-full text-center  newsbox hover:bg-primary group p-8 flex flex-col items-center justify-center">
                                             <p className='text-primary font-light text-lg group-hover:text-light w-full'>
@@ -344,6 +377,9 @@ const HumansLinktree = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div className="w-full pt-7 pb-2">
+                            <p className='text-primary text-lg font-bold'>Let’s talk beyond words, and heal beyond touch.</p>
                         </div>
                     </div>
                 </div>
