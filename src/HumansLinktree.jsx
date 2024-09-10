@@ -16,12 +16,19 @@ import buddylife from './assets/buddylife.png'
 import hindustan from './assets/hindustan-times.png'
 import indiatimes from './assets/timesindia.png'
 import amarujala from './assets/amarujala.jfif'
+import hindustanpopup from './assets/hindustanpopup.png'
+import indiatimespopup from './assets/indiatimespopup.png'
+import amarujalapopup from './assets/amarujalapopup.png'
 import blogs1 from './assets/blogs1.png'
+import classes from './assets/classes.jpeg'
+import workshops from './assets/workshop.jpeg'
+import interview from './assets/interview.jpeg'
 import { CalendarOutlined } from '@ant-design/icons'
 //import healing from './assets/healing.png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { useState } from 'react'
 //import { useState } from 'react'
 //import { Link } from 'react-router-dom'
 
@@ -31,9 +38,9 @@ const HumansLinktree = () => {
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
-       
+
         arrows: false,
-       
+
         responsive: [
             {
                 breakpoint: 768, // for screens smaller than 768px (mobile devices)
@@ -126,6 +133,59 @@ const HumansLinktree = () => {
     // }
     //  }
 
+
+
+    const slideerr = [
+
+        {
+            title: "Hindustan Times",
+            imageSrc: hindustan,
+            modalimage: hindustanpopup,
+            url: "https://www.hindustantimes.com/lifestyle/pet/animal-communication-healing-therapies-to-help-resolve-behaviour-issues-in-pets-101676294863615.html"
+        },
+        {
+            title: "India Times",
+            imageSrc: indiatimes,
+            modalimage: indiatimespopup,
+            url: "https://humansofanimalland.com/public/assets/pdf/buddy-life-magzine.pdf"
+        },
+        {
+            title: "Amar Ujala",
+            imageSrc: amarujala,
+            modalimage: amarujalapopup,
+            url: "https://humansofanimalland.com/public/assets/pdf/buddy-life-magzine.pdf"
+        },
+        {
+            title: "Buddy Life",
+            imageSrc: buddylife,
+            url: "https://humansofanimalland.com/public/assets/pdf/buddy-life-magzine.pdf"
+        }
+
+    ]
+    const [showModal, setShowModal] = useState(false);
+    const [currentImage, setCurrentImage] = useState(null);
+
+    const handleItemClick = (item) => {
+        if (item.modalimage) {
+            // Show modal with modalimage if present
+            setCurrentImage(item.modalimage);
+            setShowModal(true);
+        } else if (item.url.endsWith('.pdf')) {
+            // If it's a PDF, open in new tab
+            window.open(item.url, '_blank');
+        } else {
+            // Otherwise, open the normal URL
+            window.open(item.url, '_blank');
+        }
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+        setCurrentImage(null);
+    };
+
+
+
     return (
         <>
             <section className="py-10 px-5 flex justify-center items-center">
@@ -178,7 +238,7 @@ const HumansLinktree = () => {
                             <a href='https://www.instagram.com/reel/C_Xq29BSPoN/?igsh=OXBmOHVzMG5xNXRj' target='_blank'>
                                 <div className="bg-primary rounded-lg p-2 inline-flex items-center lg:w-[530px] w-full gap-5 cursor-pointer ">
                                     <div className="icon w-[50px] h-[50px] rounded-lg overflow-hidden">
-                                        <img src={tedspeaker3} alt="image" className="w-[70px] h-[50px] object-fit-cover bg-white" />
+                                        <img src={interview} alt="image" className="w-[70px] h-[50px] object-fit-cover bg-white" />
                                     </div>
                                     <div className="text">
                                         <p className="text-light font-semibold text-md">Exclusive Interview with Dr Parul Chaudhri</p>
@@ -186,7 +246,7 @@ const HumansLinktree = () => {
                                 </div>
                             </a>
                         </div>
-                        {/*  <div className="w-full py-3">
+                         {/*<div className="w-full py-3">
                             <h1 className="font-bold pb-3 text-xl text-[#502e7b]">TAKE THE QUIZ!</h1>
                             <div
                                 className="bg-primary rounded-lg p-2 inline-flex items-center lg:w-[530px] w-full gap-2 cursor-pointer"
@@ -199,9 +259,9 @@ const HumansLinktree = () => {
                                     <p className="text-light font-semibold text-md">QUIZ  :  How Connected Are You With Your Pet?</p>
                                 </div>
                             </div>
-                        </div>
+                        </div>*/}
 
-                        {showQuiz && ( // Show quiz section when 'showQuiz' is true
+                        {/*{showQuiz && ( // Show quiz section when 'showQuiz' is true
                             <div className="bg-[#e2daed] rounded-[10px] mt-4 p-4">
                                 <div className="w-full">
                                     <p className='font-light text-lg text-primary'>
@@ -222,7 +282,7 @@ const HumansLinktree = () => {
                                         ))}
                                     </div>
                                     <div className="flex justify-between mt-4">
-                                        {/* Show 'Previous' button only if not on the first quiz 
+                                         Show 'Previous' button only if not on the first quiz 
                                         {currentQuizIndex > 0 && (
                                             <button
                                                 className="bg-secondary text-white px-4 py-2 rounded-lg"
@@ -245,35 +305,28 @@ const HumansLinktree = () => {
                             <h1 className='font-bold pb-3 text-xl text-primary'>Media Speaks</h1>
                             <div className="lg:w-[530px] w-full inline-flex items-center overflow-hidden border border-primary rounded-lg p-3 shadow-lg shadow-gray-300">
                                 <Slider {...settings} className="w-full">
-                                    <div className="slide-item">
-                                        <div className="w-[150px] h-[150px] flex items-center justify-center newsbox">
-                                            <a href='https://www.hindustantimes.com/lifestyle/pet/animal-communication-healing-therapies-to-help-resolve-behaviour-issues-in-pets-101676294863615.html' target='_blank'>
-                                                <img src={hindustan} alt='image' className="w-full h-full object-cover" />
-                                            </a>
+                                    {slideerr.map((itm, index) => (
+                                        <div key={index} className="slide-item">
+                                            <div className="w-[150px] h-[150px] flex items-center justify-center newsbox">
+                                                <button onClick={() => handleItemClick(itm)} className="focus:outline-none">
+                                                    <img src={itm.imageSrc} alt={itm.title} className="w-full h-full object-cover" />
+                                                </button>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="slide-item">
-                                        <div className="w-[150px] h-[150px] flex items-center justify-center newsbox">
-                                            <a href='https://humansofanimalland.com/public/assets/pdf/buddy-life-magzine.pdf' target='_blank'>
-                                                <img src={indiatimes} alt='image' className="w-full h-full object-cover" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="slide-item">
-                                        <div className="w-[150px] h-[150px] flex items-center justify-center newsbox">
-                                            <a href='https://humansofanimalland.com/public/assets/pdf/buddy-life-magzine.pdf' target='_blank'>
-                                                <img src={amarujala} alt='image' className="w-full h-full object-cover" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="slide-item">
-                                        <div className="w-[150px] h-[150px] flex items-center justify-center newsbox">
-                                            <a href='https://humansofanimalland.com/public/assets/pdf/buddy-life-magzine.pdf' target='_blank'>
-                                                <img src={buddylife} alt='image' className="w-full h-full object-cover" />
-                                            </a>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </Slider>
+
+                                {/* Modal for image */}
+                                {showModal && (
+                                    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4">
+                                        <div className="relative bg-white p-4 rounded-lg max-w-lg w-full">
+                                            <button className="absolute top-[-15px] right-[4px] text-[#faebeb] text-2xl bg-primary px-3  rounded-md" onClick={closeModal}>
+                                                &times;
+                                            </button>
+                                            <img src={currentImage} alt="Popup" className="w-full h-auto" />
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </div>
                         <div className="w-full py-3">
@@ -360,17 +413,17 @@ const HumansLinktree = () => {
                             <div className='lg:w-[530px] w-full inline-flex items-center'>
                                 <div className="grid grid-cols-2 gap-5 w-full">
                                     <div className="col-span-1">
-                                        <div className="w-full h-full text-center  newsbox hover:bg-primary group p-8 flex flex-col items-center justify-center">
-                                            <p className='text-primary font-light text-lg group-hover:text-light w-full'>
+                                        <div className="w-full h-full text-center  newsbox hover:bg-primary group p-4 flex flex-col items-center justify-center">
+                                            <img src={classes} alt='image' />
+                                            {/*<p className='text-primary font-light text-md group-hover:text-light w-full'>
                                                 CLASSES
-                                            </p>
+                                            </p>*/}
                                         </div>
                                     </div>
                                     <div className="col-span-1">
-                                        <div className="w-full h-full text-center  newsbox hover:bg-primary group p-8 flex flex-col items-center justify-center">
-                                            <p className='text-primary font-light text-lg group-hover:text-light w-full'>
-                                                WORKSHOP
-                                            </p>
+                                        <div className="w-full h-full text-center  newsbox hover:bg-primary group p-4 flex flex-col items-center justify-center">
+                                            <img src={workshops} alt='image' />
+
                                         </div>
                                     </div>
                                 </div>
