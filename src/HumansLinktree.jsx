@@ -30,7 +30,7 @@ const HumansLinktree = () => {
         dots: false,
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
        
         arrows: false,
        
@@ -39,7 +39,7 @@ const HumansLinktree = () => {
                 breakpoint: 768, // for screens smaller than 768px (mobile devices)
                 settings: {
                     slidesToShow: 2, // show 2 slides on mobile
-                    slidesToScroll: 1
+                    slidesToScroll: 3,
                 }
             }
         ]
@@ -162,7 +162,7 @@ const HumansLinktree = () => {
                             </a>
                         </div>
                         <div className="w-full py-3">
-                            <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>Dr PARUL SPEAKS</h1>
+                            <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>Dr.  Parul Speaks</h1>
                             <a href='https://www.youtube.com/watch?v=1RdcFTJBLYE' target='_blank'>
                                 <div className="bg-primary rounded-lg p-2 inline-flex items-center lg:w-[530px] w-full gap-5 cursor-pointer ">
                                     <div className="icon w-[50px] h-[50px] rounded-lg overflow-hidden">
@@ -242,7 +242,7 @@ const HumansLinktree = () => {
                             </div>
                         )}*/}
                         <div className="w-full py-3">
-                            <h1 className='font-bold pb-3 text-xl text-primary'>MEDIA SPEAKS</h1>
+                            <h1 className='font-bold pb-3 text-xl text-primary'>Media Speaks</h1>
                             <div className="lg:w-[530px] w-full inline-flex items-center overflow-hidden border border-primary rounded-lg p-3 shadow-lg shadow-gray-300">
                                 <Slider {...settings} className="w-full">
                                     <div className="slide-item">
@@ -277,7 +277,7 @@ const HumansLinktree = () => {
                             </div>
                         </div>
                         <div className="w-full py-3">
-                            <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>WEBSITE</h1>
+                            <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>Website</h1>
                             <a href='https://humansofanimalland.com/' target='_blank'>
                                 <div className="bg-primary rounded-lg p-2 inline-flex items-center lg:w-[530px] w-full gap-5 cursor-pointer ">
                                     <div className="icon w-[50px] h-[50px] rounded-lg overflow-hidden">
@@ -333,7 +333,7 @@ const HumansLinktree = () => {
                             </div>
                         </div>*/}
                         <div className="w-full py-3">
-                            <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>BLOGS</h1>
+                            <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>Blogs</h1>
                             <div className=" lg:w-[530px] w-full inline-flex items-center">
                                 <div className="grid grid-cols-1 gap-5">
                                     <div className="col-span-1 ">
@@ -356,7 +356,7 @@ const HumansLinktree = () => {
                             </div>
                         </div>
                         <div className="w-full py-3">
-                            <h1 className='font-bold pb-3 text-xl text-primary'>COMING SOON</h1>
+                            <h1 className='font-bold pb-3 text-xl text-primary'>Coming Soon</h1>
                             <div className='lg:w-[530px] w-full inline-flex items-center'>
                                 <div className="grid grid-cols-2 gap-5 w-full">
                                     <div className="col-span-1">
