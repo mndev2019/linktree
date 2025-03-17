@@ -246,7 +246,7 @@ const HumansLinktree = () => {
                                 </div>
                             </a>
                         </div>
-                         {/*<div className="w-full py-3">
+                        {/*<div className="w-full py-3">
                             <h1 className="font-bold pb-3 text-xl text-[#502e7b]">TAKE THE QUIZ!</h1>
                             <div
                                 className="bg-primary rounded-lg p-2 inline-flex items-center lg:w-[530px] w-full gap-2 cursor-pointer"
@@ -331,7 +331,7 @@ const HumansLinktree = () => {
                         </div>
                         <div className="w-full py-3">
                             <h1 className='font-bold pb-3 text-xl text-[#502e7b]'>Website</h1>
-                            <a href='https://humansofanimalland.com/' target='_blank'>
+                            <a href='https://www.humansofanimalland.com/' target='_blank'>
                                 <div className="bg-primary rounded-lg p-2 inline-flex items-center lg:w-[530px] w-full gap-5 cursor-pointer ">
                                     <div className="icon w-[50px] h-[50px] rounded-lg overflow-hidden">
                                         <img src={logo} alt="image" className="w-[70px] h-[50px] object-fit-cover bg-white" />
